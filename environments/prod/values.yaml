@@ -1,6 +1,6 @@
 # Production environment configuration
 replicaCount: 3
-image: docker.io/gajjarvatsall/my-app-cicd:latest
+image: 
 environment: production
 resources:
   limits:
