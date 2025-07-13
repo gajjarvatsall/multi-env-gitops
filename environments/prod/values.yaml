@@ -1,6 +1,10 @@
 # Production environment configuration
 replicaCount: 3
-image: 
+image:
+  repository: docker.io/gajjarvatsall/multi-env-cicd
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
 environment: production
 resources:
   limits:

@@ -1,7 +1,16 @@
 # Staging environment configuration
 replicaCount: 2
-image: 
-environment: staging
+image:
+  repository: docker.io/gajjarvatsall/multi-env-cicd
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3000
+  nodePort: 30081
+
 resources:
   limits:
     cpu: 200m
@@ -9,7 +18,7 @@ resources:
   requests:
     cpu: 100m
     memory: 128Mi
-service:
-  type: NodePort
-  port: 80
-  nodePort: 30081
+
+env:
+  NODE_ENV: staging
+  APP_VERSION: "1.0.0"

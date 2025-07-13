@@ -1,6 +1,6 @@
 # Dev environment configuration
 replicaCount: 1
-image: docker.io/gajjarvatsall/my-app-cicd:latest
+image: docker.io/gajjarvatsall/multi-env-cicd:latest
 environment: development
 resources:
   limits:
