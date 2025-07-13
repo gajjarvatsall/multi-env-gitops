@@ -1,6 +1,6 @@
 # Staging environment configuration
 replicaCount: 2
-image: docker.io/gajjarvatsall/my-app-cicd:latest
+image: 
 environment: staging
 resources:
   limits:
