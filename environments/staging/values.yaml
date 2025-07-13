@@ -1,0 +1,15 @@
+# Staging environment configuration
+replicaCount: 2
+image: docker.io/YOUR_DOCKER_USERNAME/my-app-cicd:latest
+environment: staging
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30081

@@ -1,0 +1,15 @@
+# Dev environment configuration
+replicaCount: 1
+image: docker.io/YOUR_DOCKER_USERNAME/my-app-cicd:latest
+environment: development
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30080
