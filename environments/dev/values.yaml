@@ -1,7 +1,16 @@
 # Dev environment configuration
 replicaCount: 1
-image: docker.io/gajjarvatsall/multi-env-cicd:latest
-environment: development
+image:
+  repository: docker.io/gajjarvatsall/multi-env-cicd
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3000
+  nodePort: 30080
+
 resources:
   limits:
     cpu: 100m
@@ -9,7 +18,7 @@ resources:
   requests:
     cpu: 50m
     memory: 64Mi
-service:
-  type: NodePort
-  port: 80
-  nodePort: 30080
+
+env:
+  NODE_ENV: development
+  APP_VERSION: "1.0.0"

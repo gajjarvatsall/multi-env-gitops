@@ -5,7 +5,12 @@ image:
   tag: "latest"
   pullPolicy: IfNotPresent
 
-environment: production
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3000
+  nodePort: 30082
+
 resources:
   limits:
     cpu: 500m
@@ -13,7 +18,7 @@ resources:
   requests:
     cpu: 200m
     memory: 256Mi
-service:
-  type: NodePort
-  port: 80
-  nodePort: 30082
+
+env:
+  NODE_ENV: production
+  APP_VERSION: "1.0.0"
