@@ -2,7 +2,7 @@
 replicaCount: 2
 image:
   repository: docker.io/gajjarvatsall/multi-env-cicd
-  tag: ""
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
