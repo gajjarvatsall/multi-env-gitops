@@ -1,5 +1,5 @@
 # Production environment configuration
-replicaCount: 3
+replicaCount: 6
 image:
   repository: docker.io/gajjarvatsall/multi-env-cicd
   tag: "latest"
