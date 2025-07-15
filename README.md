@@ -6,6 +6,8 @@ A comprehensive DevOps project demonstrating modern GitOps practices with Kubern
 
 This project implements a GitOps-based CI/CD pipeline that manages application deployments across multiple environments (development, staging, and production) using declarative configuration and automated synchronization.
 
+<img width="7156" height="3353" alt="Multi-Environment GitOps Pipeline" src="https://github.com/user-attachments/assets/d42e792d-a162-42bd-b064-f278d1898d49" />
+
 ### Key Components
 
 - **Helm Charts**: Templated Kubernetes manifests for consistent deployments
